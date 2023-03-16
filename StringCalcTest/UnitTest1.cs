@@ -4,8 +4,11 @@ namespace StringCalcTest
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        [ExpectedException (typeof (NullReferenceException))]
+        public void ThrowsNullReferenceException_When_StringIsNull()
         {
+            string s = null;
+            double result = StringCalc.Add(s);
         }
     }
 }
