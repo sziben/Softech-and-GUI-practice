@@ -35,7 +35,7 @@ namespace StringCalcTest
         [TestMethod]
         public void ResultTheNumber2_When_StringIsNumber()
         {
-            string s = "12,5";
+            string s = "12.5";
             double result = StringCalc.Add(s);
             Assert.AreEqual(12.5, result);
         }
