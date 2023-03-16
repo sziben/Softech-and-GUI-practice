@@ -35,15 +35,16 @@ namespace StringCalcTest
         [TestMethod]
         public void ResultTheNumber2_When_StringIsNumber()
         {
-            double result = StringCalc.Add("12,5");
+            string s = "12,5";
+            double result = StringCalc.Add(s);
             Assert.AreEqual(12.5, result);
         }
 
         [TestMethod]
         public void ResultTheSum_When_StringHasTwoNumbers()
         {
-            double result = StringCalc.Add("12 5");
-            Assert.AreEqual(17, result);
+            double result = StringCalc.Add("12 5   100");
+            Assert.AreEqual(117, result);
         }
 
     }
