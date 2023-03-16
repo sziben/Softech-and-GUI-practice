@@ -4,7 +4,13 @@
     {
         internal static double Add(string? s)
         {
-            throw new NotImplementedException();
+            if (s == null)
+            {
+                throw new NullReferenceException();
+            }
+
+            return double.Parse(s);
+            
         }
     }
 }
